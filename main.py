@@ -13,7 +13,8 @@ def show():
 
 @app.get("/edit")
 def edit():
-    toggle_flag["toggle"] = not toggle_flag["toggle"]
+    global toggle_flag
+    toggle_flag["toggle"] = True
     return {"toggle": toggle_flag["toggle"]}
 
 @app.get("/")
